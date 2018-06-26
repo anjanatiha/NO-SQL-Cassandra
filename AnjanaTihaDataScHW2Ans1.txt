@@ -1,0 +1,140 @@
+CREATE TABLE restaurant_review(
+  restaurant_name text,
+  review_date timestamp,
+  review_id int,
+  customer_review text,
+  PRIMARY KEY (restaurant_name, review_date, review_id)
+)
+WITH CLUSTERING ORDER BY (review_date DESC);
+
+
+CREATE TABLE restaurant_name_by_zipcode(
+  zipcode text,
+  rating float,
+  restaurant_name text,
+  restaurant_id int,
+  PRIMARY KEY (zipcode, rating, restaurant_name, restaurant_id)
+)
+WITH CLUSTERING ORDER BY (rating DESC);
+
+
+CREATE TABLE restaurantbycuisine(
+  zipcode text,
+  cuisine_name text,
+  restaurant_name text,
+  restaurant_id int,
+  PRIMARY KEY (zipcode, cuisine_name, restaurant_name, restaurant_id)
+);
+
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Olive Garden', '2016-08-24', 'Waterbury location is consistent with other Olive Gardens we have been at. This one had good service They didnt hassle us when we sat talking for a while after we finished eating', 1);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Olive Garden', '2016-07-24', 'This restaurant is very basic and usually crowded, because of it''s location. The soup is the best part of the meal.', 2);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Olive Garden', '2016-07-21', 'Was in area for other reason, decided to try Olive Garden in Manchester, was very pleased with our choice, especially when there were so many other restaurants around.', 3);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Olive Garden', '2015-05-02', 'While in town house hunting we DARED to try Olive Garden. Everything was excellent! The service, food, waiter Tyler, and the new ziosk were awesome. Thanks! PS: Now let''s find a house!.', 4);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Olive Garden', '2016-10-07', 'Did lunch here with my daughter. The food and the service were both good and didn''t take long. In and out within an hour.', 5);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Chili''s Grill & Bar', '2015-01-12', 'The place is nice, a little too crowded for my taste but was tolerable. The waiter was very courtious when taking my special food request.', 1);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Chili''s Grill & Bar', '2016-10-12', 'The Chilis in Waterbury goes out of their way to make sure you enjoy yourself. The food is always great! The wait staff is crazy good!! They will get you anything you need in a split second, your soda never sits empty and they make sure your food is perfect!', 2);
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Chili''s Grill & Bar', '2009-12-22', 'wanted crispy chicken able to do even though not on menu anymore was delicious very busy but the sevice was wonderful seated us right away', 3);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Chili''s Grill & Bar', '2010-10-28', 'Always enjoy coming to this one! Service is always with a smile. Any questions and they are on the ball ready to help! We had chicken wings, chips and salsa, honey bbq chicken and babyback ribs! Very tasty! Will be back again for sure!', 4);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Chili''s Grill & Bar', '2007-12-12', 'I met some friends for lunch and we were not disappointed. Our server was very attentive and the food was very good. I like the fact that although the restaurant is located in a shopping center, it is in the back of the parking lot so finding a parking spot is very easy.', 5);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Chili''s Grill & Bar', '2011-08-03', 'Nice place, fun atmosphere. Many choices of flavors for wings. Staff was friendly and helpful. Good place for lunch or to watch a sports game. It has a full bar in the back.', 6);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Buffalo Wild Wings', '2016-10-02','Went there for date night. service was great. kitchen a little slow. but the food was amazing. the ice tea are the best i have found so far.', 1);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Buffalo Wild Wings', '2014-01-12','The music was crazy loud for a sports bar. The food was good but we had to hunt down a manager to get our check.', 2);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Buffalo Wild Wings', '2015-10-30','the wings were very good and the family had a great time. We enjoyed dinner with friends here and the service was prompt and fast.', 3);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Buffalo Wild Wings', '2016-05-22','Best selection of wings other products are also great staff is friendly prices are reasonable and atomosphere is fun sports all over the place taste of food and drinks a A plus', 4);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Buffalo Wild Wings', '2013-11-15','Too noisy and the 10 tv''s were too distracting. The food was average, nothing to write home about. The meal''s value was not worth it. Our waitress couldn''t answer our questions about ingredients.', 5);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Buffalo Wild Wings', '2015-08-27','A couple of friends went to have drinks and a couple of appetizers for the UFC night and we had a good night. Unfortunately I don''t like their wings and think they are too dry.', 6);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Royal Buffet', '2016-07-02','This buffet is slipping - was much better 2-3 years ago. Much of the buffet is not Asian foods at all. Prices keep increasing so ''cheap eats'' this place is not.', 1);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Royal Buffet', '2016-10-20','Food was fresh and hot, sushi was good and there was a choice for everyone. Desserts were basic. Is family friendly, plenty of parking and the service was good', 2);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Royal Buffet', '2016-04-17','As a local buffet this place offers a wide variety of selections. Service and atmosphere are friendly. Good value as a buffet.', 3);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Osaka', '2016-09-02','Over priced and loud and not very good and i have already put in a review to this one and i guess you didnt except it', 1);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Osaka', '2016-02-12','The food was great. We had Hibachi shrimp and chicken with fried rice. Loved the atmosphere and ambience.', 2);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Osaka', '2015-01-19','We went with out daughter, son-in-law and two grandchildren. The chef was talented and entertaining. The food was tasty and reasonable priced. We expected more patrons on a Tuesday evening.', 3);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Osaka', '2015-03-22', 'OWent for lunch with a group. Enjoyed Rodo''s service, he was good at keeping everyone laughing. Everyone enjoyed their food and there was more than we could all eat! Great price for lunch experience. I want to go back and sit at the sushi conveyor.', 4);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Central BBQ', '2016-04-22', 'Family BBQ. Good but not amazing. Poor service. It was like a cafeteria. Order at the counter then seat yourself.', 1);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Central BBQ', '2015-08-02', 'Spot on!!!! we had the pulled pork and chicken wings. Wings were amazing and my wifes pull pork was very flavorful the service was very friendly and fast. We would recommend this place if you are in the area', 2);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Central BBQ', '2005-03-17', 'Central BBQ ''s food was outstanding. It was fresh and tasty. The staff was friendly. Can''t wait to go again!', 3);
+
+INSERT INTO restaurant_review(restaurant_name, review_date, customer_review, review_id) VALUES ('Central BBQ', '2016-01-23', 'My spouse pronounced these the best chips he had ever eaten. Seems to be a popular place with both locals and tourists. Highly recommend you go here!', 4);
+
+
+INSERT INTO restaurant_name_by_zipcode (zipcode, rating, restaurant_name, restaurant_id) VALUES ('38111' , 4.5, 'Derae Restaurant', 1);
+INSERT INTO restaurant_name_by_zipcode (zipcode, rating, restaurant_name, restaurant_id) VALUES ('38111' , 4.3, 'R P Tracks', 2);
+INSERT INTO restaurant_name_by_zipcode (zipcode, rating, restaurant_name, restaurant_id) VALUES ('38111' , 4.0, 'Rock''N Dough Pizza', 3);
+INSERT INTO restaurant_name_by_zipcode (zipcode, rating, restaurant_name, restaurant_id) VALUES ('38111' , 4.2, 'Cafe Eclectic', 4);
+INSERT INTO restaurant_name_by_zipcode (zipcode, rating, restaurant_name, restaurant_id) VALUES ('38111' , 4.1, 'Ubee''s', 5);
+INSERT INTO restaurant_name_by_zipcode (zipcode, rating, restaurant_name, restaurant_id) VALUES ('38111' , 4.3, 'Garibaldi''s Pizza', 6);
+INSERT INTO restaurant_name_by_zipcode (zipcode, rating, restaurant_name, restaurant_id) VALUES ('38111' , 4.4, 'Wang''s Mandarin House', 7);
+INSERT INTO restaurant_name_by_zipcode (zipcode, rating, restaurant_name, restaurant_id) VALUES ('38111' , 3.9, 'Osaka''s', 8);
+INSERT INTO restaurant_name_by_zipcode (zipcode, rating, restaurant_name, restaurant_id) VALUES ('38111' , 3.9, 'Moe''s Southwest Grill''s', 9);
+INSERT INTO restaurant_name_by_zipcode (zipcode, rating, restaurant_name, restaurant_id) VALUES ('06705' , 3.9, 'Brass City Bistro', 10);
+INSERT INTO restaurant_name_by_zipcode (zipcode, rating, restaurant_name, restaurant_id) VALUES ('06705' , 4.5, 'La Tavola Ristorante', 11);
+INSERT INTO restaurant_name_by_zipcode (zipcode, rating, restaurant_name, restaurant_id) VALUES ('06709' , 3.5, 'The Thirsty Goat', 1);
+INSERT INTO restaurant_name_by_zipcode (zipcode, rating, restaurant_name, restaurant_id) VALUES ('06702' , 4.2, 'Domenick && Pia Pizzeria', 12);
+INSERT INTO restaurant_name_by_zipcode (zipcode, rating, restaurant_name, restaurant_id) VALUES ('06702' , 4.1, 'Diorio Restaurant && Bar', 13);
+INSERT INTO restaurant_name_by_zipcode (zipcode, rating, restaurant_name, restaurant_id) VALUES ('06705' , 4.8, 'Hasna''s Afghan Fusion Cuisine', 14);
+INSERT INTO restaurant_name_by_zipcode (zipcode, rating, restaurant_name, restaurant_id) VALUES ('06705' , 4.3, 'Sultan''s Turkish Restaurant', 15);
+
+
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38101' , 'Chinese' , 'A-Tan Chinese Restaurant', 1);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38111' , 'Chinese' , 'Wang''s Mandarin House', 2);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38120' , 'Chinese' , 'Panda Garden', 3);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38201' , 'Chinese' , 'Mulan Bistro', 4);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38211' , 'Chinese' , 'Goodie''s', 5);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38120' , 'Chinese' , 'Yum''s Chinese Carry Out 2', 6);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38121' , 'Chinese' , 'New Hong Kong', 7);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38119' , 'Indian ' , 'Mayuri Indian Cuisine', 8);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38125' , 'Indian'  , 'Curry Bowl', 9);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38125' , 'Indian'  , 'Sai Fast Food', 10);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38125' , 'Indian'  , 'Saffron Indian Restaurant', 11);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38125' , 'Indian'  , 'Hyderabad House', 12);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38104' , 'Indian'  , 'India Palace', 13);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38122' , 'Italian' , 'Garibaldi''s Pizza', 14);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38111' , 'Italian' , 'Pete && Sam''s Restaurant', 15);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38120' , 'Italian' , 'Strano! Sicilian Kitchen & Bar', 16);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38122' , 'Italian' , 'Old Venice Pizza Company', 17);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38111' , 'Italian' , 'High Point Pizza', 18);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38101' , 'Italian' , 'Bari Ristorante', 19);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38122' , 'Italian' , 'Pizza Hut', 20);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38201' , 'Italian' , 'Dino''s Grill', 21);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38111' , 'Fusion'  , 'Osaka', 22);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38101' , 'Fusion'  , 'Sekisui Pacific Rim', 23);
+INSERT INTO restaurantbycuisine (zipcode, cuisine_name, restaurant_name, restaurant_id) VALUES ('38121' , 'Fusion'  , 'Kwik Chek', 24);
+
+
+SELECT restaurant_name, review_date, customer_review FROM restaurant_review WHERE restaurant_name = 'Olive Garden' ORDER BY review_date;
+SELECT restaurant_name, review_date, customer_review FROM restaurant_review WHERE restaurant_name = 'Buffalo Wild Wings' ORDER BY review_date;
+SELECT restaurant_name, review_date, customer_review FROM restaurant_review WHERE restaurant_name = 'Royal Buffet' ORDER BY review_date;
+SELECT restaurant_name, review_date, customer_review FROM restaurant_review WHERE restaurant_name = 'Central BBQ' ORDER BY review_date;
+
+SELECT zipcode, restaurant_name, rating FROM restaurant_name_by_zipcode WHERE zipcode = '06705' ORDER BY rating DESC;
+SELECT zipcode, restaurant_name, rating FROM restaurant_name_by_zipcode WHERE zipcode = '38111' ORDER BY rating DESC;
+
+SELECT zipcode, cuisine_name, restaurant_name FROM restaurantbycuisine WHERE zipcode = '38111' and cuisine_name = 'Italian';
+SELECT zipcode, cuisine_name, restaurant_name FROM restaurantbycuisine WHERE zipcode = '38125' and cuisine_name = 'Indian';
+SELECT zipcode, cuisine_name, restaurant_name FROM restaurantbycuisine WHERE zipcode = '38120' and cuisine_name = 'Chinese';
